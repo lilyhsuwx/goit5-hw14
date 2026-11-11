@@ -5,12 +5,13 @@ import style from "../ImageGallery/ImageGallery.module.css"
 class ImageGallery extends Component{
 
     render(){
-        const {images} = this.props
+        const {images, onClick } = this.props
         return(
             <>
-            <ul className={style.list}>{images.map((img) => {
+            <ul className={style.list}>
+            {images.map((img) => {
                 return(
-                    <ImageGalleryItem key={img.id} image={img}/>
+                    <ImageGalleryItem onClick={onClick} key={img.id} image={img}/>
                 )
             })}</ul>
             </>

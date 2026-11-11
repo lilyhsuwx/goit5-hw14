@@ -26,8 +26,6 @@ class Searchbar extends Component {
             onChange={(evt) => this.setState({searchValue: evt.target.value})}
               className={style.input}
               type="text"
-              autocomplete="off"
-              autofocus
               placeholder="Search images and photos"
             />
           </form>
